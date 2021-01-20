@@ -1,0 +1,15 @@
+server {
+	listen 80;
+	listen [::]:80;
+	
+	root /home/samedh/www/samedh.site;
+	
+	index index.html;
+	
+	server_name samedh.site www.samedh.site;
+	
+	location / {
+		try_files $uri $uri/ =404;
+	}	
+
+}
